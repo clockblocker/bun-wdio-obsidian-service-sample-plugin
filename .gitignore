@@ -18,5 +18,8 @@ node_modules
 # Exclude sourcemaps
 *.map
 
+# Bun
+bun.lockb
+
 # Exclude macOS Finder (System Explorer) View States
 .DS_Store

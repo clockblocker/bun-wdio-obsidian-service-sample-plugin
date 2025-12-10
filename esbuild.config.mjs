@@ -1,6 +1,6 @@
+import builtins from "builtin-modules";
 import esbuild from "esbuild";
 import process from "process";
-import builtins from "builtin-modules";
 
 const banner =
 `/*
@@ -15,8 +15,8 @@ const context = await esbuild.context({
     banner: {
         js: banner,
     },
-    entryPoints: ["src/main.ts"],
     bundle: true,
+    entryPoints: ["src/main.ts"],
     external: [
         "obsidian",
         "electron",
@@ -33,12 +33,12 @@ const context = await esbuild.context({
         "@lezer/lr",
         ...builtins],
     format: "cjs",
-    target: "es2018",
     logLevel: "info",
-    sourcemap: prod ? false : "inline",
-    treeShaking: true,
-    outfile: "main.js",
     minify: prod,
+    outfile: "main.js",
+    sourcemap: prod ? false : "inline",
+    target: "es2018",
+    treeShaking: true,
 });
 
 if (prod) {

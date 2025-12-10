@@ -14,10 +14,26 @@ npm run update --save
 ```
 
 ## Building and running the tests
-To build and test just use
+### Bun
+```shell
+bun install
+# Build once (tsc type-check + esbuild bundle)
+bun run build
+# Unit tests (mocha via bun) + e2e (wdio via bun)
+bun run test
+```
+Use `bun run build:dev` for a dev bundle or `bun run dev` to watch.
+
+Biome (lint/format):
+```shell
+bun run lint        # check
+bun run lint:fix    # apply fixes
+bun run format      # format only
+```
+
+### npm (optional, if you prefer Node)
 ```shell
 npm install
-# Make sure to build before running e2e tests (or use build-dev to watch for changes)
 npm run build
 npm test
 ```

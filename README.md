@@ -19,7 +19,7 @@ npm run update --save
 bun install
 # Build once (tsc type-check + esbuild bundle)
 bun run build
-# Unit tests (mocha via bun) + e2e (wdio via bun)
+# Unit tests (bun test) + e2e (wdio via bun)
 bun run test
 ```
 Use `bun run build:dev` for a dev bundle or `bun run dev` to watch.
@@ -29,13 +29,6 @@ Biome (lint/format):
 bun run lint        # check
 bun run lint:fix    # apply fixes
 bun run format      # format only
-```
-
-### npm (optional, if you prefer Node)
-```shell
-npm install
-npm run build
-npm test
 ```
 
 `wdio-obsidian-service` will automatically download Obsidian and run your tests against a sandboxed instance of Obsidian so you don't need to worry about your personal Obsidian configuration affecting the tests.

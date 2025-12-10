@@ -1,8 +1,7 @@
-import { expect } from "chai";
-import { describe, it } from "mocha";
+import { describe, expect, it } from "bun:test";
 
 describe("unit tests", () => {
-	it("Sum", () => {
-		expect(1 + 2).to.equal(3);
+	it("sum", () => {
+		expect(1 + 2).toBe(3);
 	});
 });
